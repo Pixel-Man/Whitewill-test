@@ -1,3 +1,12 @@
+$grey: #707070;
+$red: #fe6847;
+$green-blue: #228281;
+$mustard: #c2be67;
+$light-mustard: #d2cf99;
+$btn-bg: linear-gradient(to bottom, #ffc6b9, #fe6847);
+$social-bg: #3d5778;
+
+
 body {
   margin: 0;
   padding: 0;
@@ -20,12 +29,6 @@ h4 {
 img {
   max-width: 100%;
   height: auto;
-}
-
-svg {
-  display: block;
-  width: 100%;
-  height: 100%;
 }
 
 input[placeholder] {
