@@ -1,0 +1,47 @@
+@mixin background-image-retina($file, $type, $width, $height) {
+  background-image: url($file + '.' + $type);
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    & {
+      background-image: url($file + '@2x.' + $type);
+      background-size: $width $height;
+    }
+  }
+
+  @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
+    & {
+      background-image: url($file + '@3x.' + $type);
+      background-size: $width $height;
+    }
+  }
+}
+
+$breakpoints: (
+        'baby-bear': (max-width: 969px),
+        'papa-bear': (min-width: 970px)
+);
+
+/// Управление отзывчивостью.
+/// @access public
+/// @param {String} $breakpoint - точка остановки
+/// @requires $breakpoints
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  } @else {
+    @error 'Не указано значение для `#{$breakpoint}`. '
+         + 'Пожалуйста, убедитесь, что точка остановки объявлена в карте `$breakpoints`.';
+  }
+}
+
+@mixin container-fluid {
+  width: auto;
+  padding: 0 15px;
+
+  @include respond-to('papa-bear') {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+}

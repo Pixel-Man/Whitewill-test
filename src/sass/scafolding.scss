@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: "Arial", sans-serif;
+  color: #707070;
+  font-style: normal;
+  background: #f8f5c6 url("../img/main-bg.png") repeat;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Rockwell", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+input[placeholder] {
+  font-style: italic;
+}
+
+input::-moz-placeholder {
+  font-style: italic;
+}
+
+input:-moz-placeholder {
+  font-style: italic;
+}
+
+input:-ms-input-placeholder {
+  font-style: italic;
+}
+
+.btn {
+  @include respond-to("papa-bear") {
+    font-size: 18px;
+  }
+
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 5px 18px 6px;
+  font: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  color: #fe6847;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: linear-gradient(to bottom, #fff, #f2f0cb);
+  border: 1px solid #cbc892;
+  border-radius: 25px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 2px 2px #52a828;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
