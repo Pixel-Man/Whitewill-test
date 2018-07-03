@@ -1,0 +1,143 @@
+.main-banner {
+  @include container-fluid();
+
+  display: none;
+}
+
+@include respond-to("mama-bear") {
+  .main-banner {
+    display: block;
+    margin-top: 29px;
+  }
+
+  .main-banner__slides {
+    position: relative;
+    width: 100%;
+    height: 350px;
+  }
+
+  .main-banner__slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 7.4%;
+    padding-bottom: 6.6%;
+    padding-left: 67%;
+    background: url("../img/header-slide.png") no-repeat;
+    background-size: cover;
+    border: 6px solid #fff;
+    border-radius: 5px;
+    box-shadow: $box-shadow;
+  }
+
+  .main-banner__title {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 37px;
+    color: #fe6847;
+
+    span {
+      display: block;
+      line-height: 46px;
+    }
+
+    .main-banner__title--mango {
+      font-size: 60px;
+    }
+
+    .main-banner__title--shop {
+      font-size: 60px;
+      color: #588313;
+    }
+  }
+
+  .main-banner__link {
+    display: block;
+    max-width: 182px;
+    margin-top: 32px;
+    padding: 10px 0;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+    text-transform: none;
+    background: $btn-bg;
+    box-shadow: $box-shadow;
+  }
+
+  .main-banner__prev-list {
+    display: none;
+  }
+}
+
+@include respond-to("papa-bear") {
+  .main-banner__slide {
+    padding-left: 54%;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  .main-banner__prev-list {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transform: translateY(-50%);
+  }
+
+  .main-banner__prev-item {
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    height: 99px;
+    border: 3px solid transparent;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+
+    img {
+      height: 100%;
+    }
+
+    &.active,
+    &:hover {
+      border-color: #f8f5c6;
+      opacity: 1;
+    }
+
+    &:before,
+    &.active::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -5px;
+      z-index: -1;
+      width: 7px;
+      height: 7px;
+      background-color: #fff;
+      border: 3px solid #f8f5c6;
+      transform: translateY(-50%) rotate(45deg);
+      opacity: 0;
+      transition: 0.3s ease-in-out;
+    }
+
+    &.active::before,
+    &:hover::before {
+      opacity: 1;
+    }
+
+    & + li {
+      margin-top: 5px;
+    }
+  }
+}

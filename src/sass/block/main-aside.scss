@@ -1,0 +1,242 @@
+.main-aside {
+  position: fixed;
+  left: -166px;
+  z-index: 1000;
+  box-sizing: border-box;
+  max-width: 229px;
+  transition: 0.3s ease-in-out;
+
+  &.active {
+    left: -1px;
+  }
+}
+
+.main-aside__mob-toggle {
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: 100%;
+  z-index: -1;
+  width: 15px;
+  font-weight: 400;
+  font-size: 11px;
+  color: #fff;
+  background: url("../img/ctegories-bg.png") repeat;
+  border: 1px solid #cd5237;
+  border-right: 1px solid transparent;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+
+  &:hover,
+  &:focus {
+    border-right-color: $mustard;
+  }
+}
+
+//.main-aside__mob-toggle {
+//  position: absolute;
+//  top: 0;
+//  left: 100%;
+//}
+
+.main-aside__nav {
+  position: relative;
+  z-index: 2;
+  padding: 15px 0;
+  background-color: #fff;
+  border: 1px solid #cd5237;
+  box-shadow: $box-shadow;
+}
+
+.main-aside__nav-title {
+  display: none;
+  margin: 0;
+  padding: 4px 0 6px;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  background: url("../img/ctegories-bg.png") repeat;
+  border: 1px solid #cd5237;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.main-aside__nav-list {
+  margin: 0;
+  padding: 0 20px 0 15px;
+  list-style: none;
+}
+
+.main-aside__nav-link {
+  font-size: 13px;
+  line-height: 24px;
+  color: $grey;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $red;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.main-aside__reviews-title {
+  margin: 31px 0 0;
+}
+
+.main-aside__reviews-list {
+  margin: 9px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-aside__reviews-item {
+  position: relative;
+  padding-top: 17px;
+  padding-left: 78px;
+
+  & + li {
+    margin-top: 20px;
+    border-top: 1px solid $mustard;
+  }
+}
+
+.main-aside__reviews-img {
+  position: absolute;
+  top: 17px;
+  left: 0;
+  width: 58px;
+  height: 58px;
+  background-color: #fff;
+  border: 1px solid $mustard;
+  box-shadow: $box-shadow;
+}
+
+.main-aside__reviews-item-title {
+  font-size: 12px;
+  color: $grey;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $red;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.main-aside__reviews-date {
+  margin: 0;
+  padding: 0;
+  color: #a5a5a5;
+  font-style: italic;
+}
+
+.main-aside__reviews-btn {
+  margin-top: 20px;
+  padding: 1px 7px 1px 9px;
+  font-weight: 700;
+  font-size: 10px;
+}
+
+.main-aside__payment {
+  margin-top: 32px;
+}
+
+.main-aside__payment-title {
+  margin: 0;
+}
+
+.main-aside__payment-link {
+  display: block;
+  margin-top: 25px;
+
+  img {
+    width: 188px;
+    height: 58px;
+  }
+}
+
+@include respond-to("baby-bear-only") {
+  .main-aside {
+    top: 0;
+    bottom: 0;
+    z-index: 10000;
+  }
+
+  .main-aside__reviews {
+    display: none;
+  }
+
+  .main-aside__payment {
+    display: none;
+  }
+
+  .main-aside__mob-toggle {
+    top: 165px;
+    height: 150px;
+  }
+
+  .main-aside__nav {
+    box-sizing: border-box;
+    height: 100%;
+    overflow-y: auto;
+    box-shadow: none;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+  }
+}
+
+@include respond-to("mama-bear") {
+  .main-aside {
+    position: relative;
+    left: auto;
+  }
+
+  .main-aside__nav {
+    padding-bottom: 17px;
+    border-color: $mustard;
+    border-radius: 5px;
+  }
+
+  .main-aside__nav-title {
+    position: relative;
+    display: block;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: -34px;
+      z-index: -1;
+      width: 37px;
+      height: 34px;
+      background: url("../img/flag.png") no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .main-aside__mob-toggle {
+    display: none;
+  }
+
+  .main-aside__nav-list {
+    margin-top: 10px;
+    padding-left: 53px;
+  }
+}

@@ -1,0 +1,120 @@
+@keyframes openModal {
+  from {
+    transform: translateY(80%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes closedModal {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(80%);
+    opacity: 0;
+  }
+}
+
+.modal-window {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 11000;
+  display: none;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+
+  &.active {
+    display: flex;
+  }
+}
+
+.modal-window__content {
+  position: relative;
+  width: 65%;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 2px solid $mustard;
+  border-radius: 25px;
+  cursor: default;
+
+  &.open {
+    animation: openModal 0.5s ease-in-out;
+  }
+
+  &.closed {
+    animation: closedModal 0.5s ease-in-out forwards;
+  }
+}
+
+.modal-window__content-closed-btn {
+  position: absolute;
+  bottom: 100%;
+  left: 100%;
+  width: 25px;
+  height: 25px;
+  font-size: 0;
+  background: none;
+  border: 1px solid $mustard;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &::before {
+    content: "\1F7A9";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 20px;
+    color: $mustard;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease-in-out;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $grey;
+
+    &::before {
+      color: $grey;
+    }
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.modal-window__content-desc {
+  overflow-y: auto;
+}
+
+.modal-window__calc-input {
+  display: inline-block;
+  padding: 3px 5px;
+  font: inherit;
+  font-size: 13px;
+  border: 1px solid $mustard;
+  border-radius: 5px;
+}
+
+.modal-window__calc-label {
+  display: inline-block;
+  margin-left: 30px;
+  font-size: 14px;
+}
+
+.modal-window__calc-output {
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}

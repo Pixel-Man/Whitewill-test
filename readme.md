@@ -1,6 +1,7 @@
 # Проект «Whitewill-test»
 
 * Вёрстка: [Виталий Дубинка (Pixel-Man)](https://github.com/Pixel-Man).
+* Проект можно посмотреть [здесь](https://pixel-man.github.io/Whitewill-test/build/index.html).
 
 ## Описание
 

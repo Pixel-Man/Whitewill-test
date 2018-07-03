@@ -10,63 +10,67 @@
   <link href="css/style.min.css" rel="stylesheet">
   <title>foodieSHOP</title>
 </head>
-<body>
+<body id="body">
 
 <header class="main-header">
-  <div class="main-header__top-wrap">
-    <p class="main-header__tel">
-      <svg>
-        <use xlink:href="sprite.svg#phone"></use>
-      </svg>
-      1-888-123-4567
-    </p>
-    <p class="main-header__desc">Free Ground Shipping for Products over $100</p>
-    <ul class="main-header__social-list">
-      <li class="main-header__social-item">
-        <a href="#" class="main-header__social-link">
-          <svg>
-            <use xlink:href="sprite.svg#tumblr"></use>
-          </svg>
-          Twitter</a>
-      </li>
-      <li class="main-header__social-item">
-        <a href="#" class="main-header__social-link">
-          <svg>
-            <use xlink:href="sprite.svg#facebook-f"></use>
-          </svg>
-          Facebook</a>
-      </li>
-      <li class="main-header__social-item">
-        <a href="#" class="main-header__social-link">
-          <svg>
-            <use xlink:href="sprite.svg#rss"></use>
-          </svg>
-          RSS</a>
-      </li>
-      <li class="main-header__social-item">
-        <a href="#" class="main-header__social-link">
-          <svg>
-            <use xlink:href="sprite.svg#envelope"></use>
-          </svg>
-          Mail</a>
-      </li>
-    </ul>
-    <a href="#" class="main-header__my-account">My Account</a>
-    <a href="#" class="main-header__cart">
-      <svg>
-        <use xlink:href="sprite.svg#shopping-cart"></use>
-      </svg>
-      Shop</a>
-    <a href="#" class="main-header__sum">$0.00</a>
+  <div class="main-header__top">
+    <div class="main-header__top-wrap">
+      <a href="tel: 18881234567" class="main-header__tel">
+        <svg>
+          <use xlink:href="sprite.svg#phone"></use>
+        </svg>
+        1-888-123-4567
+      </a>
+      <p class="main-header__desc">Free Ground Shipping for Products over $100</p>
+      <ul class="main-header__social-list">
+        <li class="main-header__social-item">
+          <a href="#" class="main-header__social-link">
+            <svg>
+              <use xlink:href="sprite.svg#tumblr"></use>
+            </svg>
+            Twitter</a>
+        </li>
+        <li class="main-header__social-item">
+          <a href="#" class="main-header__social-link">
+            <svg>
+              <use xlink:href="sprite.svg#facebook-f"></use>
+            </svg>
+            Facebook</a>
+        </li>
+        <li class="main-header__social-item">
+          <a href="#" class="main-header__social-link">
+            <svg>
+              <use xlink:href="sprite.svg#rss"></use>
+            </svg>
+            RSS</a>
+        </li>
+        <li class="main-header__social-item">
+          <a href="#" class="main-header__social-link">
+            <svg>
+              <use xlink:href="sprite.svg#envelope"></use>
+            </svg>
+            Mail</a>
+        </li>
+      </ul>
+      <a href="#" class="main-header__my-account">My Account</a>
+      <a href="#" class="main-header__cart">
+        <svg>
+          <use xlink:href="sprite.svg#shopping-cart"></use>
+        </svg>
+        Shop</a>
+      <a href="#" class="main-header__sum">$ 0.00</a>
+    </div>
   </div>
   <nav class="main-header__nav">
-    <div class="main-header__nav-logo"><img src="img/logo.png" alt="Logo"></div>
+    <div class="main-header__nav-logo">
+      <img src="img/logo.png" alt="Logo" width="116" height="117">
+    </div>
     <ul class="main-header__nav-list">
-      <li class="main-header__nav-item"><a href="#" class="main-header__nav-link">Specials</a></li>
-      <li class="main-header__nav-item"><a href="#" class="main-header__nav-link">Fruits & Veg</a></li>
-      <li class="main-header__nav-item"><a href="#" class="main-header__nav-link">Food Products</a></li>
-      <li class="main-header__nav-item"><a href="#" class="main-header__nav-link">Locate store</a></li>
-      <li class="main-header__nav-item"><a href="#" class="main-header__nav-link">Fan Club</a></li>
+      <li class="main-header__nav-item"><a href="#" class="main-header__nav-link  active">Specials</a></li>
+      <li class="main-header__nav-item"><a href="#" class="main-header__nav-link  js-calculator">Fruits & Veg</a></li>
+      <li class="main-header__nav-item"><a href="#" class="main-header__nav-link  js-modal">Food Products</a></li>
+      <li class="main-header__nav-item"><a href="#" class="main-header__nav-link  js-modal">Locate store</a></li>
+      <li class="main-header__nav-item"><a href="#" class="main-header__nav-link  js-modal">Fan Club</a></li>
     </ul>
     <div class="main-header__nav-user">
       <a href="#" class="main-header__nav-singin">
@@ -84,31 +88,421 @@
       <label>
         <input type="search" placeholder="Enter Product Details" required>
       </label>
-      <button type="submit">
+      <button class="btn" type="submit">search
         <svg>
           <use xlink:href="sprite.svg#search"></use>
         </svg>
-        search
       </button>
     </form>
+    <button class="main-header__nav-btn-mob">Menu <span></span></button>
   </nav>
 </header>
 
 <main>
   <section class="main-banner">
-    <div class="main-banner__wrap-title">
-      <h1 class="main-banner__title">The
-        <span class="main-banner__title--mango">Mango</span>
-        <span class="main-banner__title-shop">Shop</span></h1>
-      <a href="#" class="main-banner__link  btn">Shop Mangos</a>
+    <div class="main-banner__slides">
+      <div class="main-banner__slide">
+        <div class="main-banner__wrap-title">
+          <h1 class="main-banner__title">The
+            <span class="main-banner__title--mango">Mango</span>
+            <span class="main-banner__title--shop">Shop</span></h1>
+          <a href="#" class="main-banner__link  btn">Shop Mangos</a>
+        </div>
+      </div>
+      <div class="main-banner__slide  active">
+        <div class="main-banner__wrap-title">
+          <h1 class="main-banner__title">The
+            <span class="main-banner__title--mango">Mango</span>
+            <span class="main-banner__title--shop">Shop</span></h1>
+          <a href="#" class="main-banner__link  btn">Shop Mangos</a>
+        </div>
+      </div>
+      <div class="main-banner__slide">
+        <div class="main-banner__wrap-title">
+          <h1 class="main-banner__title">The
+            <span class="main-banner__title--mango">Mango</span>
+            <span class="main-banner__title--shop">Shop</span></h1>
+          <a href="#" class="main-banner__link  btn">Shop Mangos</a>
+        </div>
+      </div>
+      <ul class="main-banner__prev-list">
+        <li class="main-banner__prev-item"><img src="img/header-slide1.jpg" alt="Banner 1" width="167" height="99"></li>
+        <li class="main-banner__prev-item  active"><img src="img/header-slide2.jpg" alt="Banner 2" width="167"
+                                                        height="99">
+        </li>
+        <li class="main-banner__prev-item"><img src="img/header-slide3.jpg" alt="Banner 3" width="167" height="99"></li>
+      </ul>
     </div>
-    <ul class="main-banner__list">
-      <li class="main-banner__item"><img src="img/header-slide1.jpg" alt="Banner 1" width="167" height="99"></li>
-      <li class="main-banner__item"><img src="img/header-slide2.jpg" alt="Banner 2" width="167" height="99"></li>
-      <li class="main-banner__item"><img src="img/header-slide3.jpg" alt="Banner 3" width="167" height="99"></li>
-    </ul>
   </section>
+  <div class="main-wrap">
+    <aside class="main-aside main-wrap__aside">
+      <button class="main-aside__mob-toggle"><span>Categories</span></button>
+      <div class="main-aside__nav">
+        <h2 class="main-aside__nav-title">Categories</h2>
+        <ul class="main-aside__nav-list">
+          <li class="main-aside__nav-item">
+            <a href="#" class="main-aside__nav-link">&#8594; &nbsp; Arts</a>
+          </li>
+          <li class="main-aside__nav-item">
+            <a href="#" class="main-aside__nav-link">&#8594; &nbsp; Beauty</a>
+          </li>
+          <li class="main-aside__nav-item">
+            <a href="#" class="main-aside__nav-link">&#8594; &nbsp; Books</a>
+          </li>
+          <li class="main-aside__nav-item">
+            <a href="#" class="main-aside__nav-link">&#8594; &nbsp; Cart Software</a>
+          </li>
+          <li class="main-aside__nav-item">
+            <a href="#" class="main-aside__nav-link">&#8594; &nbsp; Electronics</a>
+          </li>
+          <li class="main-aside__nav-item">
+            <a href="#" class="main-aside__nav-link">&#8594; &nbsp; Fashion / Clothing</a>
+          </li>
+          <li class="main-aside__nav-item">
+            <a href="#" class="main-aside__nav-link">&#8594; &nbsp; Food</a>
+          </li>
+          <li class="main-aside__nav-item">
+            <a href="#" class="main-aside__nav-link">&#8594; &nbsp; Furniture</a>
+          </li>
+          <li class="main-aside__nav-item">
+            <a href="#" class="main-aside__nav-link">&#8594; &nbsp; Home Goods</a>
+          </li>
+          <li class="main-aside__nav-item">
+            <a href="#" class="main-aside__nav-link">&#8594; &nbsp; Jewelry</a>
+          </li>
+          <li class="main-aside__nav-item">
+            <a href="#" class="main-aside__nav-link">&#8594; &nbsp; Lingerie</a>
+          </li>
+          <li class="main-aside__nav-item">
+            <a href="#" class="main-aside__nav-link">&#8594; &nbsp; Music</a>
+          </li>
+          <li class="main-aside__nav-item">
+            <a href="#" class="main-aside__nav-link">&#8594; &nbsp; Office Supplies</a>
+          </li>
+          <li class="main-aside__nav-item">
+            <a href="#" class="main-aside__nav-link">&#8594; &nbsp; Printing</a>
+          </li>
+          <li class="main-aside__nav-item">
+            <a href="#" class="main-aside__nav-link">&#8594; &nbsp; Software</a>
+          </li>
+        </ul>
+      </div>
+      <div class="main-aside__reviews">
+        <h2 class="main-aside__reviews-title  block-title">Product Reviews</h2>
+        <ul class="main-aside__reviews-list">
+          <li class="main-aside__reviews-item">
+            <div class="main-aside__reviews-img"></div>
+            <a class="main-aside__reviews-item-title" href="#">Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit.</a>
+            <p class="main-aside__reviews-date">Tue, June 2011</p>
+          </li>
+          <li class="main-aside__reviews-item">
+            <div class="main-aside__reviews-img"></div>
+            <a class="main-aside__reviews-item-title" href="#">Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit.</a>
+            <p class="main-aside__reviews-date">Tue, June 2011</p>
+          </li>
+          <li class="main-aside__reviews-item">
+            <div class="main-aside__reviews-img"></div>
+            <a class="main-aside__reviews-item-title" href="#">Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit.</a>
+            <p class="main-aside__reviews-date">Tue, June 2011</p>
+          </li>
+        </ul>
+        <a href="#" class="main-aside__reviews-btn btn">MORE REVIEWS &#8594;</a>
+      </div>
+      <div class="main-aside__payment">
+        <h2 class="main-aside__payment-title  block-title">Payment Methods</h2>
+        <a href="#" class="main-aside__payment-link">
+          <img src="img/payment.png" alt="Payment" width="184" height="56">
+        </a>
+      </div>
+    </aside>
+    <div class="main-cont main-wrap__cont">
+      <section class="main-cont__featured">
+        <h2 class="main-cont__featured-title  block-title">Today’s Featured Products</h2>
+        <ul class="main-cont__featured-list">
+          <li class="main-cont__featured-item">
+            <img src="img/featured-prod1.jpg" alt="Featured product" class="main-cont__featured-img" width="207"
+                 height="102">
+            <p class="main-cont__featured-desc">Lorem ipsum dolor sit amet, cons ectetur adipiscing elit.</p>
+            <p class="main-cont__featured-price">Price: <span>$23.00</span></p>
+            <a href="#" class="main-cont__featured-buy">&#8594; Buy Now</a>
+          </li>
+          <li class="main-cont__featured-item">
+            <img src="img/featured-prod2.jpg" alt="Featured product" class="main-cont__featured-img" width="207"
+                 height="102">
+            <p class="main-cont__featured-desc">Lorem ipsum dolor sit amet, cons ectetur adipiscing elit.</p>
+            <p class="main-cont__featured-price">Price: <span>$23.00</span></p>
+            <a href="#" class="main-cont__featured-buy">&#8594; Buy Now</a>
+          </li>
+          <li class="main-cont__featured-item">
+            <img src="img/featured-prod3.jpg" alt="Featured product" class="main-cont__featured-img" width="207"
+                 height="102">
+            <p class="main-cont__featured-desc">Lorem ipsum dolor sit amet, cons ectetur adipiscing elit.</p>
+            <p class="main-cont__featured-price">Price: <span>$23.00</span></p>
+            <a href="#" class="main-cont__featured-buy">&#8594; Buy Now</a>
+          </li>
+        </ul>
+      </section>
+      <section class="main-cont__popular">
+        <h2 class="main-cont__popular-title  block-title">Popular Products</h2>
+        <ul class="main-cont__popular-list">
+          <li class="main-cont__popular-item">
+            <img src="img/popular-prod1.jpg" alt="Popular product" class="main-cont__popular-img" width="156"
+                 height="116">
+            <p class="main-cont__popular-desc">Lorem ipsum dolor sit amet cons</p>
+            <p class="main-cont__popular-price">Price: <span>$23.00</span></p>
+            <p class="main-cont__popular-buy">
+              <a href="#" class="main-cont__popular-buy-link  btn">BUY &#8594;</a>
+              <span class="main-cont__popular-like">
+              <label><span class="js-cont__popular-like">120</span>
+                <input type="checkbox">
+                <span>&#10084;</span>
+              </label>
+            </span>
+            </p>
+          </li>
+          <li class="main-cont__popular-item">
+            <img src="img/popular-prod2.jpg" alt="Popular product" class="main-cont__popular-img" width="156"
+                 height="116">
+            <p class="main-cont__popular-desc">Lorem ipsum dolor sit amet cons</p>
+            <p class="main-cont__popular-price">Price: <span>$23.00</span></p>
+            <p class="main-cont__popular-buy">
+              <a href="#" class="main-cont__popular-buy-link  btn">BUY &#8594;</a>
+              <span class="main-cont__popular-like">
+              <label><span class="js-cont__popular-like">120</span>
+                <input type="checkbox" checked>
+                <span>&#10084;</span>
+              </label>
+            </span>
+            </p>
+          </li>
+          <li class="main-cont__popular-item">
+            <img src="img/popular-prod3.jpg" alt="Popular product" class="main-cont__popular-img" width="156"
+                 height="116">
+            <p class="main-cont__popular-desc">Lorem ipsum dolor sit amet cons</p>
+            <p class="main-cont__popular-price">Price: <span>$23.00</span></p>
+            <p class="main-cont__popular-buy">
+              <a href="#" class="main-cont__popular-buy-link  btn">BUY &#8594;</a>
+              <span class="main-cont__popular-like">
+              <label><span class="js-cont__popular-like">120</span>
+                <input type="checkbox">
+                <span>&#10084;</span>
+              </label>
+            </span>
+            </p>
+          </li>
+          <li class="main-cont__popular-item">
+            <img src="img/popular-prod4.jpg" alt="Popular product" class="main-cont__popular-img" width="156"
+                 height="116">
+            <p class="main-cont__popular-desc">Lorem ipsum dolor sit amet cons</p>
+            <p class="main-cont__popular-price">Price: <span>$23.00</span></p>
+            <p class="main-cont__popular-buy">
+              <a href="#" class="main-cont__popular-buy-link  btn">BUY &#8594;</a>
+              <span class="main-cont__popular-like">
+              <label><span class="js-cont__popular-like">120</span>
+                <input type="checkbox">
+                <span>&#10084;</span>
+              </label>
+            </span>
+            </p>
+          </li>
+          <li class="main-cont__popular-item">
+            <img src="img/popular-prod1.jpg" alt="Popular product" class="main-cont__popular-img" width="156"
+                 height="116">
+            <p class="main-cont__popular-desc">Lorem ipsum dolor sit amet cons</p>
+            <p class="main-cont__popular-price">Price: <span>$23.00</span></p>
+            <p class="main-cont__popular-buy">
+              <a href="#" class="main-cont__popular-buy-link  btn">BUY &#8594;</a>
+              <span class="main-cont__popular-like">
+              <label><span class="js-cont__popular-like">120</span>
+                <input type="checkbox">
+                <span>&#10084;</span>
+              </label>
+            </span>
+            </p>
+          </li>
+          <li class="main-cont__popular-item">
+            <img src="img/popular-prod2.jpg" alt="Popular product" class="main-cont__popular-img" width="156"
+                 height="116">
+            <p class="main-cont__popular-desc">Lorem ipsum dolor sit amet cons</p>
+            <p class="main-cont__popular-price">Price: <span>$23.00</span></p>
+            <p class="main-cont__popular-buy">
+              <a href="#" class="main-cont__popular-buy-link  btn">BUY &#8594;</a>
+              <span class="main-cont__popular-like">
+              <label><span class="js-cont__popular-like">120</span>
+                <input type="checkbox" checked>
+                <span>&#10084;</span>
+              </label>
+            </span>
+            </p>
+          </li>
+          <li class="main-cont__popular-item">
+            <img src="img/popular-prod3.jpg" alt="Popular product" class="main-cont__popular-img" width="156"
+                 height="116">
+            <p class="main-cont__popular-desc">Lorem ipsum dolor sit amet cons</p>
+            <p class="main-cont__popular-price">Price: <span>$23.00</span></p>
+            <p class="main-cont__popular-buy">
+              <a href="#" class="main-cont__popular-buy-link  btn">BUY &#8594;</a>
+              <span class="main-cont__popular-like">
+              <label><span class="js-cont__popular-like">120</span>
+                <input type="checkbox">
+                <span>&#10084;</span>
+              </label>
+            </span>
+            </p>
+          </li>
+          <li class="main-cont__popular-item">
+            <img src="img/popular-prod4.jpg" alt="Popular product" class="main-cont__popular-img" width="156"
+                 height="116">
+            <p class="main-cont__popular-desc">Lorem ipsum dolor sit amet cons</p>
+            <p class="main-cont__popular-price">Price: <span>$23.00</span></p>
+            <p class="main-cont__popular-buy">
+              <a href="#" class="main-cont__popular-buy-link  btn">BUY &#8594;</a>
+              <span class="main-cont__popular-like">
+              <label><span class="js-cont__popular-like">120</span>
+                <input type="checkbox">
+                <span>&#10084;</span>
+              </label>
+            </span>
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="main-cont__pagination">
+        <h2 class="visually-hidden">Pagination</h2>
+        <ul class="main-cont__pagination-list">
+          <li class="main-cont__pagination-item disabled">
+            <a href="#" class="main-cont__pagination-link"><< First</a>
+          </li>
+          <li class="main-cont__pagination-item disabled">
+            <a href="#" class="main-cont__pagination-link">< Prev</a>
+          </li>
+          <li class="main-cont__pagination-item active">
+            <a href="#" class="main-cont__pagination-link">1</a>
+          </li>
+          <li class="main-cont__pagination-item">
+            <a href="#" class="main-cont__pagination-link">2</a>
+          </li>
+          <li class="main-cont__pagination-item">
+            <a href="#" class="main-cont__pagination-link">3</a>
+          </li>
+          <li class="main-cont__pagination-item">
+            <a href="#" class="main-cont__pagination-link">4</a>
+          </li>
+          <li class="main-cont__pagination-item">
+            <a href="#" class="main-cont__pagination-link">5</a>
+          </li>
+          <li class="main-cont__pagination-item">
+            <a href="#" class="main-cont__pagination-link">Next ></a>
+          </li>
+          <li class="main-cont__pagination-item">
+            <a href="#" class="main-cont__pagination-link">Last >></a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
 </main>
+
+<footer class="main-footer">
+  <div class="main-footer__wrap">
+    <div class="main-footer__nav">
+      <h3 class="main-footer__nav-title">Company</h3>
+      <ul class="main-footer__nav-list">
+        <li class="main-footer__nav-item"><a href="#" class="main-footer__nav-link">Home</a></li>
+        <li class="main-footer__nav-item"><a href="#" class="main-footer__nav-link">About Us</a></li>
+        <li class="main-footer__nav-item"><a href="#" class="main-footer__nav-link">Blog</a></li>
+        <li class="main-footer__nav-item"><a href="#" class="main-footer__nav-link">Latest News</a></li>
+        <li class="main-footer__nav-item"><a href="#" class="main-footer__nav-link">Login</a></li>
+        <li class="main-footer__nav-item"><a href="#" class="main-footer__nav-link">Join Us</a></li>
+      </ul>
+    </div>
+    <div class="main-footer__nav">
+      <h3 class="main-footer__nav-title">Categories</h3>
+      <ul class="main-footer__nav-list">
+        <li class="main-footer__nav-item"><a href="#" class="main-footer__nav-link">Lorem ipsum dolor sit</a></li>
+        <li class="main-footer__nav-item"><a href="#" class="main-footer__nav-link">Amet consectetur</a></li>
+        <li class="main-footer__nav-item"><a href="#" class="main-footer__nav-link">Adipiscin elit</a></li>
+        <li class="main-footer__nav-item"><a href="#" class="main-footer__nav-link">Cras suscipit lacus</a></li>
+        <li class="main-footer__nav-item"><a href="#" class="main-footer__nav-link">Dapibus ante mattis</a></li>
+        <li class="main-footer__nav-item"><a href="#" class="main-footer__nav-link">Adipiscing nibh placerat</a></li>
+      </ul>
+    </div>
+    <div class="main-footer__nav">
+      <h3 class="main-footer__nav-title">Information</h3>
+      <ul class="main-footer__nav-list">
+        <li class="main-footer__nav-item"><a href="#" class="main-footer__nav-link">My Account</a></li>
+        <li class="main-footer__nav-item"><a href="#" class="main-footer__nav-link">Rewards</a></li>
+        <li class="main-footer__nav-item"><a href="#" class="main-footer__nav-link">Terms & Conditions</a></li>
+        <li class="main-footer__nav-item"><a href="#" class="main-footer__nav-link">Buying Guide</a></li>
+        <li class="main-footer__nav-item"><a href="#" class="main-footer__nav-link">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="main-footer__social">
+      <h3 class="main-footer__social-title">Let’s be friends</h3>
+      <ul class="main-footer__social-list">
+        <li class="main-footer__social-item">
+          <a href="#" class="main-footer__social-link">
+            <svg>
+              <use xlink:href="sprite.svg#tumblr"></use>
+            </svg>
+            Twitter</a>
+        </li>
+        <li class="main-footer__social-item">
+          <a href="#" class="main-footer__social-link">
+            <svg>
+              <use xlink:href="sprite.svg#facebook-f"></use>
+            </svg>
+            Facebook</a>
+        </li>
+        <li class="main-footer__social-item">
+          <a href="#" class="main-footer__social-link">
+            <svg>
+              <use xlink:href="sprite.svg#rss"></use>
+            </svg>
+            RSS</a>
+        </li>
+        <li class="main-footer__social-item">
+          <a href="#" class="main-footer__social-link">
+            <svg>
+              <use xlink:href="sprite.svg#envelope"></use>
+            </svg>
+            Mail</a>
+        </li>
+      </ul>
+      <h3 class="main-footer__social-title">Subscribe</h3>
+      <p class="main-footer__social-desc">Get free product updates & specials!</p>
+      <form action="#" class="main-footer__social-form">
+        <label>
+          <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="Please enter a valid format"
+                 placeholder="Enter Email" required>
+        </label>
+        <button class="btn" type="submit">submit</button>
+      </form>
+    </div>
+    <ul class="main-footer__features">
+      <li class="main-footer__features-item">
+        <img src="img/footer-advantage1.png" alt="Advantage" width="56" height="55">
+        <p>Shop online with us<br>
+          safely & securely</p>
+      </li>
+      <li class="main-footer__features-item">
+        <img src="img/footer-advantage2.png" alt="Advantage" width="41" height="36">
+        <p>We ship your orders<br>
+          anywhere!</p>
+      </li>
+    </ul>
+    <div class="main-footer__copyright">
+      <p class="main-footer__copyright-desc">©2011 Foodie Shop - Terms - Privacy Policy - Designed by <a href="#">GraphicsFuel.com</a>
+        <button class="main-footer__copyright-top-btn"><a id="top-btn" href="#body">Top</a></button>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<div class="modal-window"></div>
 
 <script src="js/main.min.js"></script>
 </body>

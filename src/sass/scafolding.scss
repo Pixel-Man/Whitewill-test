@@ -5,18 +5,34 @@ $mustard: #c2be67;
 $light-mustard: #d2cf99;
 $btn-bg: linear-gradient(to bottom, #ffc6b9, #fe6847);
 $social-bg: #3d5778;
+$box-shadow: 0 0 5px 5px rgba(231, 227, 168, 0.75);
 
 
 body {
+  @include respond-to("mama-bear") {
+    left: 0 !important;
+  }
+
+  position: relative;
+  left: 0;
   margin: 0;
   padding: 0;
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
   font-family: "Arial", sans-serif;
-  color: #707070;
+  color: $grey;
   font-style: normal;
   background: #f8f5c6 url("../img/main-bg.png") repeat;
+  transition: 0.3s ease-in-out;
+}
+
+main {
+  @include respond-to("mama-bear") {
+    padding-top: 171px;
+  }
+
+  padding-top: 128px;
 }
 
 h1,
@@ -31,27 +47,15 @@ img {
   height: auto;
 }
 
-input[placeholder] {
-  font-style: italic;
-}
-
-input::-moz-placeholder {
-  font-style: italic;
-}
-
-input:-moz-placeholder {
-  font-style: italic;
-}
-
-input:-ms-input-placeholder {
-  font-style: italic;
+a,
+svg,
+input,
+button {
+  outline: none;
+  transition: 0.3s ease-in-out;
 }
 
 .btn {
-  @include respond-to("papa-bear") {
-    font-size: 18px;
-  }
-
   display: inline-block;
   box-sizing: border-box;
   padding: 5px 18px 6px;
@@ -71,11 +75,41 @@ input:-ms-input-placeholder {
 
   &:hover,
   &:focus {
-    box-shadow: 0 2px 2px #52a828;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
   }
 
   &:active {
     opacity: 0.7;
+  }
+}
+
+.block-title {
+  position: relative;
+  padding-left: 33px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  &::before {
+    width: 21px;
+    height: 21px;
+    background-color: $red;
+    border-radius: 50%;
+  }
+
+  &::after {
+    left: 5px;
+    width: 6px;
+    height: 6px;
+    border: 1px solid #fff;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
   }
 }
 

@@ -1,0 +1,272 @@
+.main-cont__featured-title {
+  margin: 0;
+}
+
+.main-cont__featured-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin: 18px 0 0;
+  padding: 10px 11px;
+  list-style: none;
+  background-color: #fff;
+  border: 1px solid $mustard;
+  border-radius: 5px;
+  box-shadow: $box-shadow;
+}
+
+.main-cont__featured-item {
+  position: relative;
+  width: 100%;
+
+  & + li {
+    margin-top: 50px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -25px;
+      right: 0;
+      left: 0;
+      height: 1px;
+      background-color: $mustard;
+    }
+  }
+}
+
+.main-cont__featured-img {
+  display: block;
+  width: 100%;
+}
+
+.main-cont__featured-desc {
+  margin: 19px 0 0;
+  padding: 0;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.main-cont__featured-price {
+  margin: 15px 0 0;
+  padding: 0;
+  font-size: 15px;
+  line-height: 18px;
+
+  span {
+    font-weight: bold;
+    color: $green-blue;
+  }
+}
+
+.main-cont__featured-buy {
+  position: relative;
+  display: inline-block;
+  margin-top: 7px;
+  margin-left: 3px;
+  font-size: 13px;
+  color: $red;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    left: 15px;
+    height: 1px;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s ease-in-out;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      border-color: $red;
+    }
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.main-cont__popular {
+  margin-top: 14px;
+}
+
+.main-cont__popular-title {
+  margin: 0;
+}
+
+.main-cont__popular-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-cont__popular-item {
+  box-sizing: border-box;
+  width: 45%;
+  margin: 27px 0 0;
+  padding: 1px 1px 12px;
+  background-color: #fff;
+  border: 1px solid $mustard;
+  box-shadow: $box-shadow;
+
+  &:nth-of-type(2n) {
+    margin-left: auto;
+  }
+}
+
+.main-cont__popular-img {
+  display: block;
+  width: 100%;
+}
+
+.main-cont__popular-desc {
+  margin: 6px 0 0;
+  padding: 0 6px;
+  font-size: 13px;
+  line-height: 17px;
+  color: #000;
+}
+
+.main-cont__popular-price {
+  margin: 11px 0 0;
+  padding: 0 6px;
+  font-size: 12px;
+
+  span {
+    color: $green-blue;
+  }
+}
+
+.main-cont__popular-buy {
+  display: flex;
+  margin: 11px 0 0;
+  padding: 0 7px;
+}
+
+.main-cont__popular-buy-link {
+  padding: 0 7px 0 16px;
+  font-size: 10px;
+}
+
+.main-cont__popular-like {
+  display: inline-block;
+  margin-left: auto;
+  font-size: 11px;
+
+  label {
+    cursor: pointer;
+
+    &:hover span:last-of-type,
+    &:focus span:last-of-type {
+      color: #a5c512;
+    }
+  }
+
+  input {
+    display: none;
+
+    &:checked + span {
+      color: #a5c512;
+    }
+  }
+
+  .js-cont__popular-like {
+    margin-right: 2px;
+    font-size: 12px;
+  }
+
+  span {
+    font-size: 18px;
+    color: $grey;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+.main-cont__pagination {
+  margin-top: 29px;
+  padding-top: 20px;
+  border-top: 1px solid $mustard;
+}
+
+.main-cont__pagination-list {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-cont__pagination-item {
+  &.disabled {
+    display: none;
+  }
+
+  &.active {
+    a {
+      color: #fff;
+      background-color: $mustard;
+    }
+  }
+}
+
+.main-cont__pagination-link {
+  padding: 3px 6px;
+  font-size: 12px;
+  color: $red;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    background-color: $mustard;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+@include respond-to("mama-bear") {
+  .main-cont__featured-list {
+    flex-wrap: nowrap;
+    padding-bottom: 23px;
+  }
+
+  .main-cont__featured-item + li {
+    margin-top: 0;
+    margin-left: 34px;
+
+    &::after {
+      top: 0;
+      bottom: 0;
+      left: -17px;
+      width: 1px;
+      height: auto;
+    }
+  }
+
+  .main-cont__popular-like {
+    margin-right: 12px;
+  }
+}
+
+@include respond-to('papa-bear') {
+  .main-cont__popular-list {
+    justify-content: space-between;
+  }
+
+  .main-cont__popular-item {
+    max-width: 160px;
+
+    &:nth-of-type(2n) {
+      margin-left: 0;
+    }
+  }
+}

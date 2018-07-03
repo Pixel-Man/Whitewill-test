@@ -1,0 +1,19 @@
+.main-wrap {
+  @include container-fluid();
+
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 37px;
+}
+
+@include respond-to("mama-bear") {
+  .main-wrap {
+    margin-top: 37px;
+  }
+
+  .main-wrap__cont {
+    width: percentage(712/960);
+    margin-left: 20px;
+  }
+}

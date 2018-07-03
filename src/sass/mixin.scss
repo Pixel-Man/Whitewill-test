@@ -1,7 +1,7 @@
 $breakpoints: (
         'baby-bear': (min-width: 320px),
         'baby-bear-only': (max-width: 767px),
-        'mama-bear': (main-width: 768px),
+        'mama-bear': (min-width: 768px),
         'papa-bear': (min-width: 1170px)
 );
 
@@ -26,7 +26,7 @@ $breakpoints: (
 
   @include respond-to('papa-bear') {
     max-width: 960px;
-    width: percentage(960/1600);
+    width: 75%;
     margin: 0 auto;
   }
 }
